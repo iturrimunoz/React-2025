@@ -10,10 +10,11 @@ const Navigator = () => {
             <Link to="/think" className="nav-link">Think</Link>
             <Link to="/product" className="nav-link">Product</Link>
             <Link to="/about" className="nav-link">About</Link>
-            <Link to="/dictionary" className="nav-link">Dictonary </Link>
+            <Link to="/dictionary" className="nav-link">Dictionary</Link>
+           
             
         </nav>
     )
 }
 
-export default Navigator
+export default Navigator;
