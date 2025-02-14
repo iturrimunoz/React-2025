@@ -26,11 +26,16 @@ function DictionaryScreen() {
     dispatch(removeWord({ word, language }));
   };
 
-  const handleTranslateWord = () => {
-    const translation = translateWord(wordToTranslate, fromLanguage, toLanguage);
-    setTranslatedWord(translation);
+  const handleTranslateWord = async () => {
+    try {
+      const translation = await translateWord(wordToTranslate, fromLanguage, toLanguage);
+      setTranslatedWord(translation);
+    } catch (error) {
+      console.error('Error translating word:', error);
+    }
   };
 
+  
   const openModal = (content) => {
     setModalContent(content);
     setShowModal(true);
